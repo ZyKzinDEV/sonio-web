@@ -216,7 +216,7 @@ const Navbar = () => {
             </div>
           )}
           <a href="#features" className="text-lg font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white">{t.nav.features}</a>
-          <a href="#support" className="text-lg font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white">{t.nav.support}</a>
+          {/* <a href="#support" className="text-lg font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white">{t.nav.support}</a> */}
           <hr className="border-black/10 dark:border-white/10 my-2" />
           <button 
             onClick={() => download('desktop')}
