@@ -167,7 +167,7 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <button className="text-sm font-medium text-black dark:text-white hover:text-sonio-blue dark:hover:text-sonio-light transition-colors">{t.nav.login}</button>
+          {/* <button className="text-sm font-medium text-black dark:text-white hover:text-sonio-blue dark:hover:text-sonio-light transition-colors">{t.nav.login}</button> */}
           <button 
             onClick={() => download('desktop')}
             disabled={isDownloading !== null}
