@@ -4,6 +4,7 @@ export const baseEnglish = {
     badge: "ALL FOR FREE! NO PREMIUM PLANS! NO FEES!",
     title1: "Feel the music.",
     title2: "Like never before.",
+    title3: "DOWNLOAD THE BETA",
     desc: "Immerse yourself in high-fidelity audio, personalized playlists, and a fluid interface designed for true music lovers.",
     dlDesktop: "Download for Desktop",
     dlAndroid: "Download for Android",

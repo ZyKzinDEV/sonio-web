@@ -273,12 +273,22 @@ const Hero = () => {
           <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.1] mb-6 text-black dark:text-white">
             {t.hero.title1}<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-sonio-blue to-sonio-light">
-              {t.hero.title2}
+              {t.hero.title2} 
             </span>
+            {/* <span className="text-transparent bg-clip-text bg-gradient-to-r from-sonio-red to-sonio-red2">
+              {t.hero.title3}
+            </span> */}
           </h1>
+          
           <p className="text-lg text-black/60 dark:text-white/60 mb-8 max-w-lg leading-relaxed">
             {t.hero.desc}
           </p>
+
+        <h1 className="font-display text-5xl md:text-3xl font-bold leading-[1.1] mb-6 text-black dark:text-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sonio-red to-sonio-red2">
+              {t.hero.title3}
+            </span>
+        </h1>
           
           <div className="flex flex-col sm:flex-row gap-4">
             <button 
