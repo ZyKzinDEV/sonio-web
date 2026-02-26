@@ -132,10 +132,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Logo />
         
-        <div className="hidden md:flex items-center gap-8">
+        {/* <div className="hidden md:flex items-center gap-8">
           <a href="#features" className="text-sm font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors">{t.nav.features}</a>
           <a href="#support" className="text-sm font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors">{t.nav.support}</a>
-        </div>
+        </div> */}
 
         <div className="hidden md:flex items-center gap-4">
           <button 
