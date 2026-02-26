@@ -624,8 +624,8 @@ const Footer = () => {
             <h4 className="font-bold mb-4 text-black dark:text-white">{t.footer.company}</h4>
             <ul className="space-y-3 text-black/60 dark:text-white/60 text-sm">
               <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">{t.footer.about}</a></li>
-              <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">{t.footer.jobs}</a></li>
-              <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">{t.footer.record}</a></li>
+              {/* <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">{t.footer.jobs}</a></li> */}
+              {/* <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">{t.footer.record}</a></li> */}
             </ul>
           </div>
           
@@ -633,9 +633,9 @@ const Footer = () => {
             <h4 className="font-bold mb-4 text-black dark:text-white">{t.footer.communities}</h4>
             <ul className="space-y-3 text-black/60 dark:text-white/60 text-sm">
               <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">{t.footer.artists}</a></li>
-              <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">{t.footer.devs}</a></li>
+              {/* <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">{t.footer.devs}</a></li>
               <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">{t.footer.ads}</a></li>
-              <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">{t.footer.investors}</a></li>
+              <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">{t.footer.investors}</a></li> */}
             </ul>
           </div>
           
