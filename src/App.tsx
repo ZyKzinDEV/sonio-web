@@ -359,7 +359,7 @@ const Hero = () => {
             style={{ y: y1 }}
           >
             <div className="w-12 h-12 rounded-full bg-purple-500/10 dark:bg-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400">
-              <Radio className="w-6 h-6" />
+              <Play className="w-6 h-6" />
             </div>
             <div>
               <p className="text-sm font-bold text-black dark:text-white">{t.hero.radio}</p>
