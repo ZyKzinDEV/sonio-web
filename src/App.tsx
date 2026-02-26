@@ -284,7 +284,9 @@ const Hero = () => {
             {t.hero.desc}
           </p>
 
-        <h1 className="font-display text-5xl md:text-3xl font-bold leading-[1.1] mb-6 text-black dark:text-white">
+          {/* BAIXAR APPS */}
+
+        {/* <h1 className="font-display text-5xl md:text-3xl font-bold leading-[1.1] mb-6 text-black dark:text-white">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-sonio-red to-sonio-red2">
               {t.hero.title3}
             </span>
@@ -307,14 +309,11 @@ const Hero = () => {
               {isDownloading === 'android' ? <Loader2 className="w-5 h-5 animate-spin" /> : <Smartphone className="w-5 h-5" />}
               {t.hero.dlAndroid}
             </button>
-          </div>
+          </div> */}
           
           <div className="mt-10 flex items-center gap-4 text-sm text-black/50 dark:text-white/50">
             <div className="flex -space-x-2">
-              {/* {[1, 2, 3, 4].map((i) => (
-                // <img key={i} src={`https://picsum.photos/seed/${i}/200/200`} alt="User" className="w-8 h-8 rounded-full border-2 border-white dark:border-sonio-bg" referrerPolicy="no-referrer" />
-              <img key={i} src={`https://i.pinimg.com/1200x/bb/00/fb/bb00fbabd0a58d0bc918cb8bd5664837.jpg`} alt="User" className="w-8 h-8 rounded-full border-2 border-white dark:border-sonio-bg" referrerPolicy="no-referrer" />
-              ))} */}
+    
 
               <img src={`https://i.pinimg.com/1200x/bb/00/fb/bb00fbabd0a58d0bc918cb8bd5664837.jpg`} alt="User" className="w-8 h-8 rounded-full border-2 border-white dark:border-sonio-bg" referrerPolicy="no-referrer" />
               <img src={`https://i.pinimg.com/736x/4c/b6/8a/4cb68a1af5f423421309718969b0ab79.jpg`} alt="User" className="w-8 h-8 rounded-full border-2 border-white dark:border-sonio-bg" referrerPolicy="no-referrer" />
@@ -613,7 +612,9 @@ const CTA = () => {
               {t.cta.desc}
             </p>
             
-            <div className="flex flex-col sm:flex-row justify-center gap-6">
+            {/* BAIXAR APPS */}
+
+            {/* <div className="flex flex-col sm:flex-row justify-center gap-6">
               <button 
                 onClick={() => download('desktop')}
                 disabled={isDownloading !== null}
@@ -630,7 +631,9 @@ const CTA = () => {
                 {isDownloading === 'android' ? <Loader2 className="w-6 h-6 animate-spin" /> : <Download className="w-6 h-6" />}
                 {t.hero.dlAndroid}
               </button>
-            </div>
+            </div> */}
+
+
           </div>
         </motion.div>
       </div>
