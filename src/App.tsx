@@ -35,22 +35,35 @@ const useDownload = () => {
 
   const download = async (platform: 'desktop' | 'android') => {
     setIsDownloading(platform);
-    // Add a small delay for realism
-    await new Promise(resolve => setTimeout(resolve, 800));
+    
     try {
-      // Create a dummy binary file to make the download feel real (e.g., 45MB for desktop, 25MB for android)
-      const dummySize = platform === 'desktop' ? 1024 * 1024 * 45 : 1024 * 1024 * 25; 
-      const dummyData = new Uint8Array(dummySize); 
-      const blob = new Blob([dummyData], { type: 'application/octet-stream' });
+      // Repositório atualizado com base no screenshot
+      const githubRepo = "ZyKzinDEV/sonio-web"; 
       
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = platform === 'desktop' ? 'SonioSetup-v2.0.0.exe' : 'Sonio-v2.0.0.apk';
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(url);
-      document.body.removeChild(a);
+      try {
+        // Tenta ir buscar a última release à API do GitHub
+        const response = await fetch(`https://api.github.com/repos/${githubRepo}/releases/latest`);
+        
+        if (response.ok) {
+          const data = await response.json();
+          // Procura o ficheiro correto (.exe para desktop, .apk para android)
+          const extension = platform === 'desktop' ? '.exe' : '.apk';
+          const asset = data.assets.find((a: any) => a.name.endsWith(extension));
+          
+          if (asset) {
+            // Inicia o download real do ficheiro a partir do GitHub
+            window.location.href = asset.browser_download_url;
+            setIsDownloading(null);
+            return;
+          }
+        }
+      } catch (e) {
+        console.error("Erro ao procurar release na API", e);
+      }
+      
+      // Fallback: Se a API falhar ou não encontrar o ficheiro, abre a página de releases do GitHub
+      window.open(`https://github.com/${githubRepo}/releases/latest`, '_blank');
+      
     } catch (error) {
       console.error("Download failed", error);
     } finally {
@@ -60,6 +73,7 @@ const useDownload = () => {
 
   return { download, isDownloading };
 };
+
 
 const LogoIcon = ({ className = "", style }: { className?: string, style?: React.CSSProperties }) => {
   const [imgError, setImgError] = useState(false);
@@ -287,9 +301,16 @@ const Hero = () => {
           
           <div className="mt-10 flex items-center gap-4 text-sm text-black/50 dark:text-white/50">
             <div className="flex -space-x-2">
-              {[1, 2, 3, 4].map((i) => (
-                <img key={i} src={`https://picsum.photos/seed/${i}/100/100`} alt="User" className="w-8 h-8 rounded-full border-2 border-white dark:border-sonio-bg" referrerPolicy="no-referrer" />
-              ))}
+              {/* {[1, 2, 3, 4].map((i) => (
+                // <img key={i} src={`https://picsum.photos/seed/${i}/200/200`} alt="User" className="w-8 h-8 rounded-full border-2 border-white dark:border-sonio-bg" referrerPolicy="no-referrer" />
+              <img key={i} src={`https://i.pinimg.com/1200x/bb/00/fb/bb00fbabd0a58d0bc918cb8bd5664837.jpg`} alt="User" className="w-8 h-8 rounded-full border-2 border-white dark:border-sonio-bg" referrerPolicy="no-referrer" />
+              ))} */}
+
+              <img src={`https://i.pinimg.com/1200x/bb/00/fb/bb00fbabd0a58d0bc918cb8bd5664837.jpg`} alt="User" className="w-8 h-8 rounded-full border-2 border-white dark:border-sonio-bg" referrerPolicy="no-referrer" />
+              <img src={`https://i.pinimg.com/736x/4c/b6/8a/4cb68a1af5f423421309718969b0ab79.jpg`} alt="User" className="w-8 h-8 rounded-full border-2 border-white dark:border-sonio-bg" referrerPolicy="no-referrer" />
+              <img src={`https://i.pinimg.com/736x/93/f9/ef/93f9ef30d198140dc8341a26e604110a.jpg`} alt="User" className="w-8 h-8 rounded-full border-2 border-white dark:border-sonio-bg" referrerPolicy="no-referrer" />
+             <img src={`https://i.pinimg.com/736x/12/f7/76/12f7764f739685fe8b587c66183932db.jpg`} alt="User" className="w-8 h-8 rounded-full border-2 border-white dark:border-sonio-bg" referrerPolicy="no-referrer" />
+ 
             </div>
             <p>{t.hero.users}</p>
           </div>
