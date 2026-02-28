@@ -284,9 +284,9 @@ const Hero = () => {
             {t.hero.desc}
           </p>
 
-          {/* BAIXAR APPS */}
+         
 
-        {/* <h1 className="font-display text-5xl md:text-3xl font-bold leading-[1.1] mb-6 text-black dark:text-white">
+        <h1 className="font-display text-5xl md:text-3xl font-bold leading-[1.1] mb-6 text-black dark:text-white">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-sonio-red to-sonio-red2">
               {t.hero.title3}
             </span>
@@ -301,15 +301,15 @@ const Hero = () => {
               {isDownloading === 'desktop' ? <Loader2 className="w-5 h-5 animate-spin" /> : <MonitorDown className="w-5 h-5" />}
               {t.hero.dlDesktop}
             </button>
-            <button 
+            {/* <button 
               onClick={() => download('android')}
               disabled={isDownloading !== null}
               className="flex items-center justify-center gap-2 bg-black/5 dark:bg-white/10 text-black dark:text-white px-8 py-4 rounded-full font-semibold hover:bg-black/10 dark:hover:bg-white/20 transition-all backdrop-blur-sm border border-black/10 dark:border-white/5 hover:-translate-y-1 disabled:opacity-70 disabled:hover:translate-y-0"
             >
               {isDownloading === 'android' ? <Loader2 className="w-5 h-5 animate-spin" /> : <Smartphone className="w-5 h-5" />}
               {t.hero.dlAndroid}
-            </button>
-          </div> */}
+            </button> */}
+          </div>
           
           <div className="mt-10 flex items-center gap-4 text-sm text-black/50 dark:text-white/50">
             <div className="flex -space-x-2">
@@ -612,9 +612,9 @@ const CTA = () => {
               {t.cta.desc}
             </p>
             
-            {/* BAIXAR APPS */}
+          
 
-            {/* <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <div className="flex flex-col sm:flex-row justify-center gap-6">
               <button 
                 onClick={() => download('desktop')}
                 disabled={isDownloading !== null}
@@ -623,15 +623,15 @@ const CTA = () => {
                 {isDownloading === 'desktop' ? <Loader2 className="w-6 h-6 animate-spin" /> : <Download className="w-6 h-6" />}
                 {t.hero.dlDesktop}
               </button>
-              <button 
+              {/* <button 
                 onClick={() => download('android')}
                 disabled={isDownloading !== null}
                 className="flex items-center justify-center gap-3 bg-white dark:bg-white/10 text-black dark:text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-zinc-50 dark:hover:bg-white/20 transition-colors border border-black/10 dark:border-white/10 shadow-sm disabled:opacity-70"
               >
                 {isDownloading === 'android' ? <Loader2 className="w-6 h-6 animate-spin" /> : <Download className="w-6 h-6" />}
                 {t.hero.dlAndroid}
-              </button>
-            </div> */}
+              </button> */}
+            </div>
 
 
           </div>
