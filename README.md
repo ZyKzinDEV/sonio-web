@@ -58,6 +58,5 @@ Download the latest version of Sonio from GitHub:
   </a>
 </p>
 
-No setup.  
 No payment.  
 Just download and listen 🎧
